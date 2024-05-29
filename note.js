@@ -20,4 +20,21 @@ l[yi]nk         // match // link or lynk
 \(?\d{3}[-.)]\d{3}[-.]\d{4}  // match // 222.111.2225
                                          888-999-7775
                                         (888)999-9995
- */
+ 
+!     .*  //  this is by default greedy modifier (continue to match)
+            * mean quantifiers but in pair .* this is a greedy modifier
+
+\[.*\]   // match // [xyz xyz]  hello[abc87]   //  
+\[.*?\]  // match // [xyz xyz] or [abc87]
+
+\[(.*?)]\((http.*?)\)   // swap the value   // goto capture-group.js
+
+
+
+222.111.2225, 888-999-7775, (888)999-9995
+'222.111.2225, 888-999-7775, (888)999-9995'.replace(re, '$1-xxx-xxx')
+
+change last name to firstname
+
+ 
+                                        */
