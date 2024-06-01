@@ -36,5 +36,14 @@ l[yi]nk         // match // link or lynk
 
 change last name to firstname
 
+Backreference :-A backreference refers to the submatch of a previous capturing group and matches the same text as that group. 
+
+\1 \2 \3  // backreference to group 1, 2, 3
+\1  // backreference to group 1
+\2  // backreference to group 2
+\3  // backreference to group 3
+
+    (\w+)\s\1 -This is hy Hello Hello Sun Sun Rainbow Rainbow
+
  
 */
