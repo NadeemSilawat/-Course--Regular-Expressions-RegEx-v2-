@@ -1,7 +1,11 @@
 let re = /(\w+)\s(\w+)/;
 let str = 'firstN lastN';
-let newstr = str.replace(re, '$2, $1');
-// console.log(newstr);
+// let newstr = str.replace(re, '$2, $1');
+let newstr = str.replace(re, (...rest)=>{
+    console.log(rest);
+    return `${rest[2].toUpperCase()}, ${rest[1]}`
+});
+console.log(newstr);
 
 // OUTPUT
 // lastN, firstN
